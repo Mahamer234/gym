@@ -1,0 +1,70 @@
+.programs {
+  padding: 0 2rem;
+}
+.programs__names {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8rem;
+}
+.programs__names > p {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--ArialFont);
+}
+
+.programs__names > p:nth-child(2) {
+  color: var(--orange);
+}
+
+/*------------------ programs__card */
+.programs__data {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.programs__card {
+  background: var(--caloryCard);
+  padding: 1rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: background 0.5s ease-in-out;
+}
+.programs__card:hover {
+  background: var(--planCard);
+}
+
+.Program__join {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+.Program__join img {
+  width: 0.9rem;
+}
+/* =================================== mobile screen */
+@media screen and (max-width: 768px) {
+  .programs {
+    padding: .5rem;
+  }
+
+  .programs__names {
+    margin-top: 3rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .programs__names > p {  
+    font-size: 2rem;  
+  }
+  /*------------------ programs__card */
+  .programs__data {
+     grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+   } 
+ 
+}

@@ -1,0 +1,101 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 0;
+  color: white;
+  padding-block: 1.5rem;
+}
+.Logo {
+  width: 11rem;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-links li {
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+.nav-links li button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--white);
+  text-transform: capitalize;
+  transform: color 300ms ease-in-out;
+}
+.nav-links li button:hover {
+  color: var(--orange);
+}
+/*  ----------------- mobile stye */
+.mobile__icon {
+  display: none;
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+} 
+/* ====================== mobile screen */
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 0;
+    color: white;
+    padding-block: 1rem;
+  }
+  .Logo {
+    width: 7rem;
+  }
+  .nav-links {
+    align-items: center;
+    gap: 2rem;
+    display: none;
+  }
+  .nav-links li {
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  .nav-links li button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--white);
+    text-transform: capitalize;
+    transform: color 300ms ease-in-out;
+  }
+  .nav-links li button:hover {
+    color: var(--orange);
+  }
+  .mobile__icon {
+    display: flex;
+    opacity: 1;
+  }
+  .mobile__icon {
+    position: relative;
+  }
+  .nav-linksm {
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--orange);
+    padding: 2rem;
+    z-index: 199;
+    border-radius: 3rem 1rem / 1rem 3rem;
+  }
+  .nav-linksm button {
+    background-color: transparent;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--white);
+    transition: color 300ms ease-in-out;
+  }
+  .nav-linksm button:hover {
+    color: var(--lightgray);
+  }
+}

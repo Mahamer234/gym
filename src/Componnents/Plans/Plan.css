@@ -1,0 +1,159 @@
+.plans {
+  padding: 2rem;
+  position: relative;
+}
+.blur__plans,.blur__plans2{
+  width: 12rem;
+  height: 12rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.blur__plans2{right: 0;}
+.plan__explain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.plan__explain p {
+  color: var(--white);
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--ArialFont);
+}
+
+.plan__explain p:nth-child(1),
+.plan__explain p:nth-child(3) {
+  color: transparent;
+}
+
+/* -------plans__data */
+.plans__data {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.plans__data > div {
+  background-color: var(--darkGrey);
+  padding: 2rem;
+  color: var(--white);
+  font-size: 1.1rem;
+}
+.plans__data .plan__icon {
+  font-size: 3rem;
+  color: var(--orange);
+}
+.plans__data .price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+.plan__join {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  color: var(--appColor);
+  background-color: #fff;
+  width: fit-content;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.plan_product_ul {
+  position: relative;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: 2rem;
+}
+.plan_product_ul li::before {
+  position: absolute;
+  content: "";   
+  left: -2rem;  
+  background-repeat: no-repeat;
+  background-image: url(../../assets/our/marker.png);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: contain;
+}
+
+
+/* ----------- midle plan style */
+.plans__data > div:nth-child(2) {
+  background: var(--planCard); 
+  transform: scaleY(1.1);
+} 
+.plans__data div:nth-child(2) .plan__icon {
+    font-size: 3rem;
+    color: var(--white);
+  }
+  .plans__data div:nth-child(2)  li::before {
+     
+    background-image: url(../../assets/our/marker2.png);
+   
+  }
+  
+
+  /* ========================== mobile screen  */
+  @media screen and (max-width: 768px) {
+
+    .plans {
+      padding: 1rem; 
+    }
+    .blur__plans,.blur__plans2{
+      width: 6rem;
+      height: 18rem;  
+    } 
+    .plan__explain {
+      flex-direction: column;
+      align-items: start;
+      gap: 1rem; 
+    }
+    .plan__explain p { 
+      font-size: 2rem;
+      font-weight: 500; 
+    } 
+    /* -------plans__data */
+    .plans__data { 
+      flex-direction: column; 
+      gap: 1.5rem; 
+    }
+    
+    .plans__data > div {
+      padding: 1rem; 
+      font-size: 1rem;
+    }
+    .plans__data .plan__icon {
+      font-size: 2rem;
+     }
+    .plans__data .price {
+      font-size: 2rem;
+      font-weight: 500; 
+    }
+    .plan__join {   
+      padding: 1rem 1.5rem; 
+    } 
+    /* ----------- midle plan style */
+    .plans__data > div:nth-child(2) { 
+      transform: scaleY(1);
+    }  
+    
+.blur__plans,.blur__plans2{
+  width: 6rem;
+  height: 6rem;
+  top: 50%;
+  transform: translateY(50%);
+}
+.blur__plans2{right: 0;}
+.plan__explain {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 20px;
+}
+
+  }

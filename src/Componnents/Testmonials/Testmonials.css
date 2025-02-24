@@ -1,0 +1,139 @@
+.testmonials {
+  padding: 6rem 2rem;
+  display: flex;
+  gap: 2rem;
+}
+.testmonials__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.testmonials__content h2 {
+  color: var(--orange);
+}
+
+.testmonials__content .tesStroke {
+  color: transparent;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: var(--ArialFont);
+  text-transform: uppercase;
+}
+.testmonials__content span:nth-of-type(2) {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.testmonials__content p:nth-of-type(1) {
+  color: var(--lightgray);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.testmonials__content p:nth-of-type(2) {
+  color: var(--lightgray);
+  font-weight: 400;
+}
+.testmonials__content p:nth-of-type(2) > .coachName {
+  color: var(--orange);
+}
+
+/* --------------------------- testmonials images  */
+.testmonials__image {
+  flex: 1;
+  display: flex;
+  gap: 4rem;
+  justify-content: space-around;
+}
+
+.navigation__buttons {
+  align-self: flex-end;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.navigation__buttons button {
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.navigation__buttons button img {
+  width: 1rem;
+  height: 1rem;
+}
+.testmonials__image__slider {
+  flex: 2;
+}
+.testmonials__image__slider .img__container {
+  width: 250px;
+  height: 300px;
+  position: relative;
+}
+.testmonials__image__slider .img__container img {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: relative;
+}
+.testmonials__image__slider .img__container::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  width: 100%;
+  height: 300px;
+  background-color: var(--orange);
+}
+.testmonials__image__slider .img__container::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 100%;
+  height: 300px;
+  background-color: transparent;
+  border: 2px solid var(--orange);
+}
+/* ======================================== mobile screen */
+
+@media screen and (max-width: 768px) {
+  .testmonials {
+    padding: 2rem 1rem;
+    flex-direction: column;
+  }
+  .testmonials__content {
+    gap: 1rem;
+  }
+
+  .testmonials__content .tesStroke {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .testmonials__content span:nth-of-type(2) {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  /* --------------------------- testmonials images  */
+  .testmonials__image {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .navigation__buttons {
+    gap: 0.5rem;
+  }
+  .navigation__buttons button {
+    padding: 0.5rem;
+  }
+}
